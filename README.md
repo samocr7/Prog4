@@ -8,9 +8,11 @@ To get started:
 
 2)When it is installed, open up command prompt and type: npm install -g expo-cli
 
-3)Pull this repo
+3) expo init Prog4Assignment        this creates the directory, you can name it whatever you want. You need to do this to create the directory of node modules (they don't get committed)
 
-4)In command prompt, cd to the directory that you pulled and type: expo start
+3)cd to the directory you created and pull this repo 
+
+4)In the same directory type: expo start
 
 5)Pray there aren't any build errors
 
@@ -20,8 +22,10 @@ To get started:
 
 8)App should open on your phone
 
-These should be included when you pull, but if they aren't, I installed these two libraries:
+These node modules are NOT included when you pull, you need to install these.
 
-npm install --save react-navigation This is a routing/navigation library that makes it easy to navigate between screens.
+cd to your project directory and type: 
 
-npm install --save-dev jest Jest is a testing framework that we can use for our TDD approach
+npm install --save react-navigation       This is a routing/navigation library that makes it easy to navigate between screens.
+
+npm install --save-dev jest               Jest is a testing framework that we can use for our TDD approach
