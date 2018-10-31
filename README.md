@@ -2,7 +2,7 @@
 
 COMP3504
 
-To get started: '\n'
+To get started:
 
 1)Download Node.js from https://nodejs.org/en/
 
