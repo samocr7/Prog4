@@ -11,6 +11,7 @@ class HomeScreen extends React.Component {
         <Text>Home Screen</Text>
 		<Button title="Contact List" onPress={() => this.props.navigation.navigate('Contact')}/>
 		<Button title="Send a Message" onPress={() => this.props.navigation.navigate('Message')}/>
+		
       </View>
     );
   }
@@ -35,13 +36,23 @@ class MessageScreen extends React.Component{
 		);
 	}
 	}
-	
+
+class AddContactScreen extends React.Component{
+	render() {
+		return (
+			<View style={{ flex: 1, alignItems:'center', justifyContent: 'center' }}>
+		<AddContact/>
+		</View>
+		);
+	}
+	}
 
 const RootStack = createStackNavigator(
   {
     Home: HomeScreen,
     Contact: ContactScreen,
 	Message: MessageScreen,
+	AddContact: AddContactScreen,
   },
   {
     initialRouteName: 'Home',
