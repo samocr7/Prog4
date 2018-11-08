@@ -4,13 +4,6 @@ COMP3504
 
 To get started:
 
-NODE MODULES TO DOWNLOAD:
-npm install --save prop-types
-npm install --save react-native-nav
-npm install --save react-native-camera-roll-picker
-npm install --save react-native-gifted-chat
-npm isntall --save react-native-maps
-
 1)Download Node.js from https://nodejs.org/en/
 
 2)When it is installed, open up command prompt and type: npm install -g expo-cli
@@ -36,3 +29,13 @@ cd to your project directory and type:
 npm install --save react-navigation       This is a routing/navigation library that makes it easy to navigate between screens.
 
 npm install --save-dev jest               Jest is a testing framework that we can use for our TDD approach
+
+npm install --save prop-types
+
+npm install --save react-native-nav
+
+npm install --save react-native-camera-roll-picker
+
+npm install --save react-native-gifted-chat
+
+npm isntall --save react-native-maps
