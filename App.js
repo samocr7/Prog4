@@ -1,66 +1,30 @@
-import React from 'react';
-import { Button, View, Text } from 'react-native';
+import React, { Component } from 'react';
+
 import { createStackNavigator } from 'react-navigation';
-import {ContactList} from './ContactList';
-import {SendMessage} from './SendMessage';
 
-class HomeScreen extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Home Screen</Text>
-		<Button title="Contact List" onPress={() => this.props.navigation.navigate('Contact')}/>
-		<Button title="Send a Message" onPress={() => this.props.navigation.navigate('Message')}/>
-		
-      </View>
-    );
-  }
-}
-
-class ContactScreen extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <ContactList/>
-      </View>
-    );
-  }
-}
-
-class MessageScreen extends React.Component{
-	render() {
-		return (
-		<View style={{ flex: 1, alignItems:'center', justifyContent: 'center' }}>
-		<SendMessage/>
-		</View>
-		);
-	}
-	}
-
-class AddContactScreen extends React.Component{
-	render() {
-		return (
-			<View style={{ flex: 1, alignItems:'center', justifyContent: 'center' }}>
-		<AddContact/>
-		</View>
-		);
-	}
-	}
+import ContactScreen from './Screens/ContactScreen.js';
+import MessageScreen from './Screens/MessageScreen.js';
+import HomeScreen from './Screens/HomeScreen.js';
+import AddContactScreen from './Screens/AddContactScreen.js';
 
 const RootStack = createStackNavigator(
-  {
-    Home: HomeScreen,
-    Contact: ContactScreen,
-	Message: MessageScreen,
-	AddContact: AddContactScreen,
-  },
-  {
-    initialRouteName: 'Home',
-  }
+    {
+        Home: HomeScreen,
+        ViewContacts: ContactScreen,
+        Message: MessageScreen,
+        AddContact: AddContactScreen,
+    },
+    {
+        initialRouteName: 'Home',
+    }
 );
 
-export default class App extends React.Component {
-  render() {
-    return <RootStack />;
-  }
+class App extends Component {
+    render() {
+        return (
+            <RootStack />
+        );
+    }
 }
+export default App;
+
