@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ContactList } from '../ContactList';
+import { ContactList } from '../Components/ContactList';
 import { View, Text } from 'react-native'
 
 //<ContactList /> put between views
