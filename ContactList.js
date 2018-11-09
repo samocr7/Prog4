@@ -22,4 +22,10 @@ export class ContactList extends React.Component {
 	  this.contactList.push(new Contact(fName, lName, messengerID, phoneNumber));
   }
   
+  getContactListSize(){
+	  return this.contactList.length;
+  }
+  getContactAt(index){
+	  return this.contactList[index];
+  }
 }
