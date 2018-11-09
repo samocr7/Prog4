@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { ContactList } from '../Components/ContactList.js';
-import { View, Text } from 'react-native'
+import { View, Text, Button } from 'react-native'
 
 //<ContactList /> put between views
 class ContactScreen extends Component {
@@ -8,6 +8,7 @@ class ContactScreen extends Component {
         return (
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
 				<ContactList />
+				<Button title="Add Contact" onPress={() => this.props.navigation.navigate('AddContact')} />
             </View>
         );
     }

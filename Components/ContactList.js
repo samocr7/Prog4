@@ -6,18 +6,19 @@ import { createStackNavigator } from 'react-navigation';
 
 export class ContactList extends React.Component {
 	 contactList = new Array();
- 
+ constructor(props){
+	 super(props);
+ }
   render() {
 	  
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Text>Contact List Screen</Text>
-		<Button title="Add Contact" onPress={() => this.props.navigation.navigate('Message')} />
       </View>
     );
   }
  
-
+/*
 	conList () {
 		names <div class="contacts">;
 		for (i=0; i < this.contactList.length; i++)
@@ -25,7 +26,7 @@ export class ContactList extends React.Component {
 		names </div>;
 		return names;
 	}
- 
+ */
 	 /* this.addContact ("Sam", "Osman", "12345", "403888");
 	  this.addContact ("Jorge", "Abarca", "12346", "403777");
 	  this.addContact ("Catie", "Vickers", "12347", "4039999"); // populate contact list */
