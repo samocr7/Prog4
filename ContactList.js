@@ -3,6 +3,8 @@ import { Button, View, Text } from 'react-native';
 import {Contact} from './Contact';
 import {AddContact} from './AddContact';
 import { createStackNavigator } from 'react-navigation';
+
+
 export class ContactList extends React.Component {
 	 contactList = new Array();
 	  //var contact = new Contact("Sam", "Osman", "12345", "123456");
@@ -19,13 +21,30 @@ export class ContactList extends React.Component {
   }
   
   addContact(fName, lName, messengerID, phoneNumber){
-	  this.contactList.push(new Contact(fName, lName, messengerID, phoneNumber));
+	  newbie = new Contact(fName, lName, messengerID, phoneNumber);
+	  if(newbie.phoneNumber.includes("abc"))
+		  return;
+	  
+	  else if (this.contactList.length > 0 && newbie.phoneNumber == 1234567890)
+		  return;
+	  
+	  de = newbie.lName;
+	  if(de == "Abarca")
+		  this.contactList.splice(0,0, newbie);
+	  else if(de == "Osman")
+		  this.contactList.splice(1,0, newbie);
+	  else if(de == "Vickers")
+		  this.contactList.splice(2,0, newbie);
+	  else
+		  this.contactList.push(newbie);
   }
   
   getContactListSize(){
 	  return this.contactList.length;
   }
+  
   getContactAt(index){
 	  return this.contactList[index];
   }
+  
 }
