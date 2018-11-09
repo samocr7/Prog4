@@ -1,15 +1,6 @@
 import {React} from 'react';
 import {ContactList} from '../ContactList';
 
-
-
-
-test('exampleTest', () => {
-	expect(1+2).toBe(3);
-});
-
-
-
 //adding a contact
 test('addingContact', () => {
 	let testList = new ContactList();
@@ -27,9 +18,8 @@ test('addingPartialContact', () => {
 test('sortedContact', () => {
 	let testList = new ContactList();
 	testList.addContact("Sam","Osman","145","1234567890");
-	testList.addContact("Jorge","Abarca","1245","0987654321");
 	testList.addContact("Catie","Vickers","12345","9876543210");
-	expect(testList.getContactListSize()).toEqual(3);
+	testList.addContact("Jorge","Abarca","1245","0987654321"); //should be first in the contact list
 	expect(testList.getContactAt(0).fName).toEqual("Jorge");
 });
 //adding a contact with the same phone # / id
@@ -43,7 +33,8 @@ test('sameContactPhone', () => {
 //entering contact details with proper format
 test('contactDetailsFormat', () =>{
 	let testList = new ContactList();
-	testList.addContact("Sam","Osman","145","abc1238740");
-	expect(testList.getContactListSize()).toEqual(0);
+	testList.addContact("Sam","Osman","145","1234873240"); //should be added
+	testList.addContact("Sam","Osman","145","abc1238740"); //should not be added
+	expect(testList.getContactListSize()).toEqual(1);
 });
 
