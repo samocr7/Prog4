@@ -6,6 +6,8 @@ import ContactScreen from './Screens/ContactScreen.js';
 import MessageScreen from './Screens/MessageScreen.js';
 import HomeScreen from './Screens/HomeScreen.js';
 import AddContactScreen from './Screens/AddContactScreen.js';
+import MessagingPlatformScreen from './Screens/MessagingPlatformScreen.js';
+import SkypeScreen from './Screens/SkypeScreen.js';
 
 const RootStack = createStackNavigator(
     {
@@ -13,6 +15,8 @@ const RootStack = createStackNavigator(
         ViewContacts: ContactScreen,
         Message: MessageScreen,
         AddContact: AddContactScreen,
+		MessagingPlatform: MessagingPlatformScreen,
+		Skype: SkypeScreen,
     },
     {
         initialRouteName: 'Home',

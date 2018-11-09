@@ -8,7 +8,7 @@ class HomeScreen extends Component {
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                 <Text>Home Screen</Text>
                 <Button title="Contact List" onPress={() => this.props.navigation.navigate('ViewContacts')} />
-                <Button title="Send a Message" onPress={() => this.props.navigation.navigate('Message')} />
+                <Button title="Send a Message" onPress={() => this.props.navigation.navigate('MessagingPlatform')} />
             </View>
         );
     }
