@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Button, View, Text } from 'react-native';
 import {Contact} from './Contact';
 import { createStackNavigator } from 'react-navigation';
@@ -6,19 +6,31 @@ import { createStackNavigator } from 'react-navigation';
 
 export class ContactList extends React.Component {
 	 contactList = new Array();
-	  //var contact = new Contact("Sam", "Osman", "12345", "123456");
-	  //contactList.push(contact);
+ 
   render() {
 	  
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Text>Contact List Screen</Text>
-		<Button title="Add Contact" onPress={() => this.props.navigation.navigate('AddContact')}/>
+		<Button title="Add Contact" onPress={() => this.props.navigation.navigate('Message')} />
       </View>
     );
   }
-  
-addContact(fName, lName, messengerID, phoneNumber){
+ 
+
+	conList () {
+		names <div class="contacts">;
+		for (i=0; i < this.contactList.length; i++)
+			names += "<li>" + this.contactList[i].fName + " " + this.contactList[i].lName + "</li>";
+		names </div>;
+		return names;
+	}
+ 
+	 /* this.addContact ("Sam", "Osman", "12345", "403888");
+	  this.addContact ("Jorge", "Abarca", "12346", "403777");
+	  this.addContact ("Catie", "Vickers", "12347", "4039999"); // populate contact list */
+	  
+	addPerson(fName, lName, messengerID, phoneNumber){
 	  newbie = new Contact(fName, lName, messengerID, phoneNumber);
 	  de = this.sortContact(newbie.lName);
 		
