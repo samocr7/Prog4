@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View , Button, TextInput } from 'react-native';
+import { ContactList } from './ContactList.js';
 
 class AddContact extends Component {
     constructor(props) {
@@ -24,7 +25,19 @@ class AddContact extends Component {
         }
     }
 
+    _register = () => {
+        const payload = {
+            firstName: this.firstName,
+            lastName: this.lastName,
+            messengerId: this.messengerId,
+            phoneNumber: this.phoneNumber
+        }
+        console.log(payload);
+       // ContactList.addPerson(payload.firstName, payload.lastName, payload.messengerId, payload.phoneNumber);
+    }
+
     onSubmit () {
+        console.log(this.getSnapshotBeforeUpdate);
         //onPress={() => navigate('Question1',  { stupidCount: this.state.stupidCount } )}
     }
 
@@ -32,26 +45,30 @@ class AddContact extends Component {
         return (
             <View>
                 <TextInput
+                    id = "firstName"
                     style={{ height: 40 }}
                     placeholder="First Name"
-                    onChangeText={(text) => this.setState({ text })}
+                    onChangeText={(text) => this.firstName = text}
                 />
                 <TextInput
+                    id = "lastName"
                     style={{ height: 40 }}
                     placeholder="Last Name"
-                    onChangeText={(text) => this.setState({ text })}
+                    onChangeText={(text) => this.lastName = text}
                 />
                 <TextInput
+                    id = "messengerId"
                     style={{ height: 40 }}
                     placeholder="Messenger ID"
-                    onChangeText={(text) => this.setState({ text })}
+                    onChangeText={(text) => this.messengerId = text}
                 />
                 <TextInput
+                    id = "phoneNumber"
                     style={{ height: 40 }}
                     placeholder="Phone Number"
-                    onChangeText={(text) => this.setState({ text })}
+                    onChangeText={(text) => this.phoneNumber = text}
                 />
-                <Button title = "Submit" onPress ={() => this.onSubmit.bind(this)} />
+                <Button title = "Submit" onPress ={this._register} />
             </View>
         )
     }
